@@ -1,0 +1,36 @@
+{
+    "name": "Ozon extension",
+    "description": "Ozon extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup":"popup.html",
+        "default_icon": {
+            "16": "/icon/ozon.png",
+            "32": "/icon/ozon.png",
+            "48": "/icon/ozon.png",
+            "128": "/icon/ozon.png"
+          },
+          "icons": {
+            "16": "/icon/ozon.png",
+            "32": "/icon/ozon.png",
+            "48": "/icon/ozon.png",
+            "128": "/icon/ozon.png"
+          }
+    },
+    "permissions": ["scripting", "activeTab", "<all_urls>", "webNavigation", "tabs", "notifications", "storage"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end",
+        "css": ["popup.css"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://*.ozon.*/*"
+      ]
+}

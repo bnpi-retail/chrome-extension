@@ -1,0 +1,45 @@
+#popupBody {
+  padding: 20px;
+  width: 400px;
+}
+
+.disabled-body {
+  width: 400px;
+}
+
+.check-api {
+  width: 400px;
+}
+
+.info_extension {
+  color: #060606;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'Helvetica', sans-serif;
+  user-select: none;
+  background: #f3f2f2;
+  border-radius: 15px;
+  width: 400px;
+  padding: 15px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.info-button {
+  font-size: 20px;
+  color: #060606;
+  font-family: 'Helvetica', sans-serif;
+  transition: color 0.3s, font-size 0.3s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-weight: normal;
+  margin: 0;
+}
+
+.info-button:hover {
+  color: #2b59d8;
+}
