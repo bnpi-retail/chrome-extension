@@ -14,7 +14,6 @@ async function sendData() {
 
     console.log('Код статуса:', response.status);
     if (response.status === 200) {
-      alert('Данные успешно отправлены');
       console.log('Data is cleared!');
 
     } else {
