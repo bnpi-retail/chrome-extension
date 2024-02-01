@@ -15,7 +15,7 @@ function clearFunc() {
             });
   
             if (response.ok) {
-              alert('Данные успешно очищены!')
+              // alert('Данные успешно очищены!')
             } else {
               alert(`Ошибка запроса: ${response.status}`)
             }

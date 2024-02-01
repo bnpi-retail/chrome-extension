@@ -18,7 +18,7 @@
             "128": "/icon/ozon.png"
           }
     },
-    "permissions": ["scripting", "activeTab", "<all_urls>", "webNavigation", "tabs", "notifications", "storage"],
+    "permissions": ["scripting", "activeTab", "webNavigation", "tabs", "notifications", "storage"],
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
@@ -31,6 +31,6 @@
       "service_worker": "background.js"
     },
     "host_permissions": [
-        "https://*.ozon.*/*"
+      "https://www.ozon.ru/*"
       ]
 }

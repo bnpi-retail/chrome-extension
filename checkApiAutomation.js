@@ -27,9 +27,6 @@ function checkApiAuto() {
             inputApi.style.display = 'none';
             ozonFunctions.style.display = 'block';
 
-            // inputApi.style.display = 'block';
-            // ozonFunctions.style.display = 'none';
-
           } else if (response.status === 401) {
             console.log('Authentication failed');
             ozonFunctions.style.display = 'none';
