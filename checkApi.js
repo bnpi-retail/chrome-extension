@@ -17,6 +17,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const inputApi = document.getElementById('inputApi');
         const ozonFunctions = document.getElementById('ozonFunctions');
 
+        const sessionHeader = document.getElementById('sessionHeader');
+        const counterInfo = document.getElementById('counterInfo');
+        const downloadCSVFileButton = document.getElementById('downloadCSVFileButton');
+        const sendToOdooButton = document.getElementById('sendToOdooButton');
+        const clearFuncButton = document.getElementById('clearFuncButton');
+
+        sessionHeader.style.display = 'none';
+        counterInfo.style.display = 'none';
+        downloadCSVFileButton.style.display = 'none';
+        sendToOdooButton.style.display = 'none';
+        clearFuncButton.style.display = 'none';
+
         inputApi.style.display = 'none';
         ozonFunctions.style.display = 'block';
 
