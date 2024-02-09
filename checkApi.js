@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (response.status === 200) {
         console.log('Authentication successful', response.status);
-        localStorage.setItem('apiToken', apiTokenValue);
         chrome.storage.local.set({'apiToken': apiTokenValue});
 
         const inputApi = document.getElementById('inputApi');

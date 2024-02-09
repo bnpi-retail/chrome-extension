@@ -151,7 +151,9 @@ async function main() {
     localStorage.setItem('collectedDataArray', JSON.stringify(storedData));
     localStorage.setItem('pageClose', 1);
 
-    var apiToken = localStorage.getItem('apiToken');
+    var apiTokenObject = await chrome.storage.local.get('apiToken');
+    var apiToken = apiTokenObject.apiToken;
+    
     try {
     //   const response = await fetch('http://localhost:8000/ads_users/', {
       const response = await fetch('https://retail-extension.bnpi.dev/ads_users/', {
@@ -174,7 +176,8 @@ async function main() {
 
     if (active === lastNumber) {
         const openWindow = localStorage.getItem('openWindow');
-        const apiToken = localStorage.getItem('apiToken');
+        var apiTokenObject = await chrome.storage.local.get('apiToken');
+        var apiToken = apiTokenObject.apiToken;
         window.open(`https://retail-react.bnpi.dev/contact?apiToken=${apiToken}`, 'Проверка собранных товаров', 'width=600,height=400');
         // window.open(`http://localhost:3000/contact?apiToken=${apiToken}`, 'Проверка собранных товаров', 'width=600,height=400');
         localStorage.setItem('openWindow', '0');

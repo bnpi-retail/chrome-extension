@@ -95,7 +95,8 @@ if (window.location.hostname.includes('ozon')) {
 }
 
 async function collectManyData() {
-  var apiToken = localStorage.getItem('apiToken');
+  var apiTokenObject = await chrome.storage.local.get('apiToken');
+  var apiToken = apiTokenObject.apiToken;
 
   try {
     // const response = await fetch('http://localhost:8000/take_requests/', {
@@ -142,7 +143,9 @@ async function collectManyData() {
 
 async function sendData() {
   try {
-    var apiToken = localStorage.getItem('apiToken');
+    var apiTokenObject = await chrome.storage.local.get('apiToken');
+    var apiToken = apiTokenObject.apiToken;
+    
     const storedDataString = localStorage.getItem('collectedDataArray');
     const storedDataArray = JSON.parse(storedDataString) || [];
   

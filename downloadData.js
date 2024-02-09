@@ -1,5 +1,8 @@
 async function downloadCSVFile() {
-  var apiToken = localStorage.getItem('apiToken');
+  
+  var apiTokenObject = await chrome.storage.local.get('apiToken');
+  var apiToken = apiTokenObject.apiToken;
+
   // const response = await fetch('http://localhost:8000/ads_users/download', {
     const response = await fetch('https://retail-extension.bnpi.dev/ads_users/download', {
     method: 'GET',

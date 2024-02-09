@@ -1,6 +1,8 @@
 async function sendData() {
   try {
-    var apiToken = localStorage.getItem('apiToken');
+    var apiTokenObject = await chrome.storage.local.get('apiToken');
+    var apiToken = apiTokenObject.apiToken;
+    
       // const response = await fetch('http://localhost:8000/take_ozon_data/', {
       const response = await fetch('https://retail-extension.bnpi.dev/take_ozon_data/', {
       method: 'POST',
